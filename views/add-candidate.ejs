@@ -1,0 +1,779 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<%- include('./partials/header.ejs')  %> 
+
+<body>
+    <div class="hello"></div>
+    <!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+    <!-- Start Left menu area -->
+    <div class="left-sidebar-pro">
+        <nav id="sidebar" class="">
+            <div class="sidebar-header">
+                <a href="index.html"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
+                <strong><a href="index.html"><img src="img/logo/logosn.png" alt="" /></a></strong>
+            </div>
+            <div id="test" class="left-custom-menu-adp-wrap comment-scrollbar">
+                <nav class="sidebar-nav left-sidebar-menu-pro">
+                    <ul class="metismenu" id="menu1">
+                        <li>
+                            <a class="has-arrow" href="index.html">
+								   <span class="educate-icon educate-home icon-wrap"></span>
+								   <span class="mini-click-non">Education</span>
+								</a>
+                            <ul class="submenu-angle" aria-expanded="true">
+                                <li><a title="Dashboard v.1" href="index.html"><span class="mini-sub-pro">Dashboard v.1</span></a></li>
+                                <li><a title="Dashboard v.2" href="index-1.html"><span class="mini-sub-pro">Dashboard v.2</span></a></li>
+                                <li><a title="Dashboard v.3" href="index-2.html"><span class="mini-sub-pro">Dashboard v.3</span></a></li>
+                                <li><a title="Analytics" href="analytics.html"><span class="mini-sub-pro">Analytics</span></a></li>
+                                <li><a title="Widgets" href="widgets.html"><span class="mini-sub-pro">Widgets</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a title="Landing Page" href="events.html" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Event</span></a>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="all-professors.html" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Professors</span></a>
+                            <ul class="submenu-angle" aria-expanded="false">
+                                <li><a title="All Professors" href="all-professors.html"><span class="mini-sub-pro">All Professors</span></a></li>
+                                <li><a title="Add Professor" href="add-professor.html"><span class="mini-sub-pro">Add Professor</span></a></li>
+                                <li><a title="Edit Professor" href="edit-professor.html"><span class="mini-sub-pro">Edit Professor</span></a></li>
+                                <li><a title="Professor Profile" href="professor-profile.html"><span class="mini-sub-pro">Professor Profile</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="all-students.html" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">Students</span></a>
+                            <ul class="submenu-angle" aria-expanded="false">
+                                <li><a title="All Students" href="all-students.html"><span class="mini-sub-pro">All Students</span></a></li>
+                                <li><a title="Add Students" href="add-student.html"><span class="mini-sub-pro">Add Student</span></a></li>
+                                <li><a title="Edit Students" href="edit-student.html"><span class="mini-sub-pro">Edit Student</span></a></li>
+                                <li><a title="Students Profile" href="student-profile.html"><span class="mini-sub-pro">Student Profile</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="active">
+                            <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Courses</span></a>
+                            <ul class="submenu-angle" aria-expanded="false">
+                                <li><a title="All Courses" href="all-courses.html"><span class="mini-sub-pro">All Courses</span></a></li>
+                                <li><a title="Add Courses" href="add-course.html"><span class="mini-sub-pro">Add Course</span></a></li>
+                                <li><a title="Edit Courses" href="edit-course.html"><span class="mini-sub-pro">Edit Course</span></a></li>
+                                <li><a title="Courses Profile" href="course-info.html"><span class="mini-sub-pro">Courses Info</span></a></li>
+                                <li><a title="course Payment" href="course-payment.html"><span class="mini-sub-pro">Courses Payment</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-library icon-wrap"></span> <span class="mini-click-non">Library</span></a>
+                            <ul class="submenu-angle" aria-expanded="false">
+                                <li><a title="All Library" href="library-assets.html"><span class="mini-sub-pro">Library Assets</span></a></li>
+                                <li><a title="Add Library" href="add-library-assets.html"><span class="mini-sub-pro">Add Library Asset</span></a></li>
+                                <li><a title="Edit Library" href="edit-library-assets.html"><span class="mini-sub-pro">Edit Library Asset</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-department icon-wrap"></span> <span class="mini-click-non">Departments</span></a>
+                            <ul class="submenu-angle" aria-expanded="false">
+                                <li><a title="Departments List" href="departments.html"><span class="mini-sub-pro">Departments List</span></a></li>
+                                <li><a title="Add Departments" href="add-department.html"><span class="mini-sub-pro">Add Departments</span></a></li>
+                                <li><a title="Edit Departments" href="edit-department.html"><span class="mini-sub-pro">Edit Departments</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-message icon-wrap"></span> <span class="mini-click-non">Mailbox</span></a>
+                            <ul class="submenu-angle" aria-expanded="false">
+                                <li><a title="Inbox" href="mailbox.html"><span class="mini-sub-pro">Inbox</span></a></li>
+                                <li><a title="View Mail" href="mailbox-view.html"><span class="mini-sub-pro">View Mail</span></a></li>
+                                <li><a title="Compose Mail" href="mailbox-compose.html"><span class="mini-sub-pro">Compose Mail</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-interface icon-wrap"></span> <span class="mini-click-non">Interface</span></a>
+                            <ul class="submenu-angle interface-mini-nb-dp" aria-expanded="false">
+                                <li><a title="Google Map" href="google-map.html"><span class="mini-sub-pro">Google Map</span></a></li>
+                                <li><a title="Data Maps" href="data-maps.html"><span class="mini-sub-pro">Data Maps</span></a></li>
+                                <li><a title="Pdf Viewer" href="pdf-viewer.html"><span class="mini-sub-pro">Pdf Viewer</span></a></li>
+                                <li><a title="X-Editable" href="x-editable.html"><span class="mini-sub-pro">X-Editable</span></a></li>
+                                <li><a title="Code Editor" href="code-editor.html"><span class="mini-sub-pro">Code Editor</span></a></li>
+                                <li><a title="Tree View" href="tree-view.html"><span class="mini-sub-pro">Tree View</span></a></li>
+                                <li><a title="Preloader" href="preloader.html"><span class="mini-sub-pro">Preloader</span></a></li>
+                                <li><a title="Images Cropper" href="images-cropper.html"><span class="mini-sub-pro">Images Cropper</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-charts icon-wrap"></span> <span class="mini-click-non">Charts</span></a>
+                            <ul class="submenu-angle chart-mini-nb-dp" aria-expanded="false">
+                                <li><a title="Bar Charts" href="bar-charts.html"><span class="mini-sub-pro">Bar Charts</span></a></li>
+                                <li><a title="Line Charts" href="line-charts.html"><span class="mini-sub-pro">Line Charts</span></a></li>
+                                <li><a title="Area Charts" href="area-charts.html"><span class="mini-sub-pro">Area Charts</span></a></li>
+                                <li><a title="Rounded Charts" href="rounded-chart.html"><span class="mini-sub-pro">Rounded Charts</span></a></li>
+                                <li><a title="C3 Charts" href="c3.html"><span class="mini-sub-pro">C3 Charts</span></a></li>
+                                <li><a title="Sparkline Charts" href="sparkline.html"><span class="mini-sub-pro">Sparkline Charts</span></a></li>
+                                <li><a title="Peity Charts" href="peity.html"><span class="mini-sub-pro">Peity Charts</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-data-table icon-wrap"></span> <span class="mini-click-non">Data Tables</span></a>
+                            <ul class="submenu-angle" aria-expanded="false">
+                                <li><a title="Peity Charts" href="static-table.html"><span class="mini-sub-pro">Static Table</span></a></li>
+                                <li><a title="Data Table" href="data-table.html"><span class="mini-sub-pro">Data Table</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-form icon-wrap"></span> <span class="mini-click-non">Forms Elements</span></a>
+                            <ul class="submenu-angle form-mini-nb-dp" aria-expanded="false">
+                                <li><a title="Basic Form Elements" href="basic-form-element.html"><span class="mini-sub-pro">Bc Form Elements</span></a></li>
+                                <li><a title="Advance Form Elements" href="advance-form-element.html"><span class="mini-sub-pro">Ad Form Elements</span></a></li>
+                                <li><a title="Password Meter" href="password-meter.html"><span class="mini-sub-pro">Password Meter</span></a></li>
+                                <li><a title="Multi Upload" href="multi-upload.html"><span class="mini-sub-pro">Multi Upload</span></a></li>
+                                <li><a title="Text Editor" href="tinymc.html"><span class="mini-sub-pro">Text Editor</span></a></li>
+                                <li><a title="Dual List Box" href="dual-list-box.html"><span class="mini-sub-pro">Dual List Box</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-apps icon-wrap"></span> <span class="mini-click-non">App views</span></a>
+                            <ul class="submenu-angle app-mini-nb-dp" aria-expanded="false">
+                                <li><a title="Notifications" href="notifications.html"><span class="mini-sub-pro">Notifications</span></a></li>
+                                <li><a title="Alerts" href="alerts.html"><span class="mini-sub-pro">Alerts</span></a></li>
+                                <li><a title="Modals" href="modals.html"><span class="mini-sub-pro">Modals</span></a></li>
+                                <li><a title="Buttons" href="buttons.html"><span class="mini-sub-pro">Buttons</span></a></li>
+                                <li><a title="Tabs" href="tabs.html"><span class="mini-sub-pro">Tabs</span></a></li>
+                                <li><a title="Accordion" href="accordion.html"><span class="mini-sub-pro">Accordion</span></a></li>
+                            </ul>
+                        </li>
+                        <li id="removable">
+                            <a class="has-arrow" href="#" aria-expanded="false"><span class="educate-icon educate-pages icon-wrap"></span> <span class="mini-click-non">Pages</span></a>
+                            <ul class="submenu-angle page-mini-nb-dp" aria-expanded="false">
+                                <li><a title="Login" href="login.html"><span class="mini-sub-pro">Login</span></a></li>
+                                <li><a title="Register" href="register.html"><span class="mini-sub-pro">Register</span></a></li>
+                                <li><a title="Lock" href="lock.html"><span class="mini-sub-pro">Lock</span></a></li>
+                                <li><a title="Password Recovery" href="password-recovery.html"><span class="mini-sub-pro">Password Recovery</span></a></li>
+                                <li><a title="404 Page" href="404.html"><span class="mini-sub-pro">404 Page</span></a></li>
+                                <li><a title="500 Page" href="500.html"><span class="mini-sub-pro">500 Page</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+    </div>
+    <!-- End Left menu area -->
+    <!-- Start Welcome area -->
+    <div class="all-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="logo-pro">
+                        <a href="index.html"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <%- include('./partials/profilenav.ejs') %> 
+        <!-- Single pro tab review Start-->
+        <div class="single-pro-review-area mt-t-30 mg-b-15">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="product-payment-inner-st">
+                            <ul id="myTabedu1" class="tab-review-design">
+                                <li class="active"><a href="#description">Candidate details</a></li>
+                                <li><a href="#reviews"> Address info</a></li>
+                                <li><a href="#INFORMATION">Details of origin</a></li>
+                                <li><a href="#RELATIVES">Relatives details</a></li>
+                                <li><a href="#NEXTOFKIN">Next of kin</a></li>
+                            </ul>
+                            <div id="myTabContent" class="tab-content custom-product-edit">
+                                <div class="product-tab-list tab-pane fade active in" id="description">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="review-content-section">
+                                                <div id="dropzone1" class="pro-ad addcoursepro">
+                                                    <!-- <form action="/upload" class="dropzone dropzone-custom needsclick addcourse" id="demo1-upload"> -->
+                                                        <div class="row">
+                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                                                                <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
+                                                                    <div class="student-inner-std res-mg-b-30 res-tablet-mg-t-30 dk-res-t-pro-30">
+                                                                        <div class="student-img">
+                                                                            <img id="passport_photo1" src="#" alt="" />
+                                                                        </div>
+                                                                        <div class="student-dtl">
+                                                                            <h2 id="candidate_name1"></h2>
+                                                                           
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                    <div class="row">
+                                                                        <!-- <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                                                            <label class="login2 pull-right pull-right-pro">File Upload System Left</label>
+                                                                        </div> -->
+                                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                            <div class="file-upload-inner ts-forms">
+                                                                                <div class="input prepend-small-btn">
+                                                                                    <div class="file-button">
+                                                                                        P. photo
+                                                                                        <input id="file_upload1" type="file">
+                                                                                    </div>
+                                                                                    <input type="text" id="prepend-small-btn1" placeholder="no file selected">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                               
+                                                                
+                                                                    <div class="form-group data-custon-pick" id="data_2">
+                                                                        <div class="input-group date">
+                                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                                            <input type="text" class="form-control" value="" placeholder="Registration date">
+                                                                        </div>
+                                                                    </div>
+                                                                <div class="form-group">
+                                                                    <input name="name" id="name" type="text" class="form-control" placeholder="Name">
+                                                                </div>
+                                                                <!-- <div class="form-group">
+                                                                    <input name="telephone" type="number" class="form-control" placeholder="Telephone">
+                                                                </div> -->
+                                                                <div class="row">
+                                                                    <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                        <div class="input-mask-title">
+                                                                            <label>Phone</label>
+                                                                        </div>
+                                                                    </div> -->
+                                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                        <div class="input-mark-inner mg-b-22">
+                                                                            <input type="text" class="form-control" data-mask="(999) 999-9999" placeholder="Phone number">
+                                                                            <span class="help-block">(999) 999-9999</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                              
+                                                                <div class="form-group data-custon-pick" id="data_2">
+                                                                    <div class="input-group date">
+                                                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                                        <input type="text" class="form-control" value="" placeholder="Date of birth">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input name="age" id="age" type="number" class="form-control" placeholder="Age">
+                                                                </div>
+
+                                                                <div class="chosen-select-single mg-b-20 form-group">
+                                                                   
+                                                                    <select data-placeholder="Choose a Country..." class="chosen-select form-control" tabindex="-1">
+                                                                            <option value="">Marital status</option>
+                                                                            <option value="Married">Married</option>
+                                                                            <option value="Single">Single</option>
+                                                                    </select>
+                                                                </div>
+                                                               
+                                                                <div class="form-group">
+                                                                    <input name="children" type="text" class="form-control" placeholder="Number of Children">
+                                                                </div>
+
+                                                                
+
+                                                                <div class="chosen-select-single mg-b-20">
+                                                                    
+                                                                    <select data-placeholder="Choose a Country..." class="chosen-select form-control" tabindex="-1">
+                                                                            <option value="">Select Job category</option>
+                                                                            <option value="House maid">House maid</option>
+                                                                            <option value="Nurse">Nurse</option>
+                                                                    </select>
+                                                                </div>
+                                                               
+                                                            </div>
+                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                                                                <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
+                                                                    <div class="student-inner-std res-mg-b-30 res-tablet-mg-t-30 dk-res-t-pro-30">
+                                                                        <div class="student-img">
+                                                                            <img id="passport_photo" src="" alt="" />
+                                                                        </div>
+                                                                        <div class="student-dtl">
+                                                                            <h2 id="candidate_name"></h2>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                              
+                                                                    <div class="row">
+                                                                        <!-- <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                                                            <label class="login2 pull-right pull-right-pro">File Upload System Left</label>
+                                                                        </div> -->
+                                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                            <div class="file-upload-inner ts-forms">
+                                                                                <div class="input prepend-small-btn">
+                                                                                    <div class="file-button">
+                                                                                        F. photo
+                                                                                        <input type="file" id="file_upload" />
+                                                                                    </div>
+                                                                                    <input type="text" id="prepend-small-btn2" placeholder="no file selected">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                               
+
+                                                                 <!-- <div class="form-group">
+                                                                    <input name="maritalstatus" type="text" class="form-control" placeholder="Marital status">
+                                                                </div> -->
+
+                                                                <!-- <div class="form-group res-mg-t-15">
+                                                                    <input name="sex" type="text" class="form-control" placeholder="Sex">
+                                                                </div> -->
+
+                                                               
+                                                               
+                                                                <!-- <div class="form-group">
+                                                                    <input name="religion" type="text" class="form-control" placeholder="Religion">
+                                                                </div> -->
+
+                                                                <div class="chosen-select-single mg-b-20">
+                                                                    
+                                                                    <select data-placeholder="Choose a Country..." class="chosen-select form-control" tabindex="-1">
+                                                                            <option value="">Religion</option>
+                                                                            <option value="Moslem">Moslem</option>
+                                                                            <option value="Christian">Christian</option>
+                                                                    </select>
+                                                                </div>
+
+                                                                <!-- <div class="form-group res-mg-t-15">
+                                                                    <input name="jobtitle" type="text" class="form-control" placeholder="Job title">
+                                                                </div> -->
+
+                                                                <div class="chosen-select-single mg-b-20">
+                                                                    
+                                                                    <select data-placeholder="Choose a Country..." class="chosen-select form-control" tabindex="-1">
+                                                                            <option value="">Job title</option>
+                                                                            <option value="House maid">House maid</option>
+                                                                            <option value="Nurse">Nurse</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input name="crprofessor" type="text" class="form-control" placeholder="NIN number">
+                                                                </div>
+                                                                <!-- <div class="form-group">
+                                                                    <input id="year" name="year" type="text" class="form-control" placeholder="Year">
+                                                                </div> -->
+
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control" placeholder="Spouse Surname">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control" placeholder="Spouse Given name">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control" placeholder="Maiden names">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control" placeholder="Date of marriage">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control" placeholder="Place of marriage">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="payment-adress">
+                                                                    <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    <!-- </form> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-tab-list tab-pane fade" id="reviews">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="review-content-section">
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                        <div class="devit-card-custom">
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" placeholder="Place of birth">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" placeholder="Nationality">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" placeholder="Country of residence">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" placeholder="Current Address">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" placeholder="District of birth">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" placeholder="Current District(Passport)">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" placeholder="County/Municipality">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" placeholder="Sub county">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" placeholder="Parish/Ward">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" placeholder="Village(LC1/Zone">
+                                                            </div>
+                                                            <a href="#" class="btn btn-primary waves-effect waves-light">Submit</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-tab-list tab-pane fade" id="INFORMATION">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="review-content-section">
+												<div class="row">
+													<div class="col-lg-12">
+														<div class="devit-card-custom">
+															<div class="form-group">
+																<input type="text" class="form-control" placeholder="Nationality">
+															</div>
+															<div class="form-group">
+																<input type="text" class="form-control" placeholder="District">
+															</div>
+															<div class="form-group">
+																<input type="text" class="form-control" placeholder="County/Municipality">
+															</div>
+															<div class="form-group">
+																<input type="text" class="form-control" placeholder="Sub county">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Parish/Ward">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Village(LC1/Zone">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Applicant's tribe">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Details of clan/generation of origin">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="First Descendant">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Second Descendant">
+															</div>
+															<button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+														</div>
+													</div>
+												</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product-tab-list tab-pane fade" id="RELATIVES">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="review-content-section">
+												<div class="row">
+													<div class="col-lg-12">
+														<div class="devit-card-custom">
+														
+                                                            <div class="chosen-select-single mg-b-20">
+                                                                    
+                                                                <select data-placeholder="Choose a Country..." class="chosen-select form-control" tabindex="-1">
+                                                                        <option value="">Father status</option>
+                                                                        <option value="Moslem">Deceased</option>
+                                                                        <option value="Christian">Alive</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Father surname">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Father given name">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="NIN number">
+															</div>
+                                                            <div class="form-group data-custon-pick" id="data_2">
+                                                                <div class="input-group date">
+                                                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                                    <input type="text" class="form-control" value="" placeholder="Date of birth">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Place of birth">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="District">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="County/Municipality">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Sub county">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Parish/Ward">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Village(LC1/Zone)">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Father's tribe">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Nationality">
+															</div>
+															
+														</div>
+													</div>
+												</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="review-content-section">
+												<div class="row">
+													<div class="col-lg-12">
+														<div class="devit-card-custom">
+														
+                                                            <div class="chosen-select-single mg-b-20">
+                                                                    
+                                                                <select data-placeholder="Choose a Country..." class="chosen-select form-control" tabindex="-1">
+                                                                        <option value="">Mother status</option>
+                                                                        <option value="Moslem">Deceased</option>
+                                                                        <option value="Christian">Alive</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Mother surname">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Mother given name">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="NIN number">
+															</div>
+                                                            <div class="form-group data-custon-pick" id="data_2">
+                                                                <div class="input-group date">
+                                                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                                    <input type="text" class="form-control" value="" placeholder="Date of birth">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Place of birth">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="District">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="County/Municipality">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Sub county">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Parish/Ward">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Village(LC1/Zone)">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Father's tribe">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Nationality">
+															</div>
+															
+														</div>
+													</div>
+												</div>
+                                            </div>
+                                        </div>
+                                      
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="payment-adress">
+                                                <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product-tab-list tab-pane fade" id="NEXTOFKIN">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="review-content-section">
+												<div class="row">
+													<div class="col-lg-12">
+														<div class="devit-card-custom">
+															<div class="form-group">
+																<input type="text" class="form-control" placeholder="Next of kin surname">
+															</div>
+															<div class="form-group">
+																<input type="text" class="form-control" placeholder="Next of kin given name">
+															</div>
+															<div class="form-group">
+                                                                <div class="input-mark-inner mg-b-22">
+                                                                    <input type="text" class="form-control" data-mask="(999) 999-9999" placeholder="Phone number">
+                                                                    <span class="help-block">(999) 999-9999</span>
+                                                                </div>
+                                                            </div>
+															<div class="form-group">
+																<input type="text" class="form-control" placeholder="District">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="County/Municipality">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Sub county">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Parish/Ward">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Village(LC1/Zone)">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Relationship">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="NIN number">
+															</div>
+                                                            <div class="form-group">
+																<input type="text" class="form-control" placeholder="Agent's name">
+															</div>
+                                                            <div class="form-group">
+                                                                <div class="input-mark-inner mg-b-22">
+                                                                    <input type="text" class="form-control" data-mask="(999) 999-9999" placeholder="Agent's phone number">
+                                                                    <span class="help-block">(999) 999-9999</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="input-mark-inner mg-b-22">
+                                                                    <input type="text" class="form-control" data-mask="(999) 999-9999" placeholder="Father's phone number">
+                                                                    <span class="help-block">(999) 999-9999</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="input-mark-inner mg-b-22">
+                                                                    <input type="text" class="form-control" data-mask="(999) 999-9999" placeholder="Mother's phone number">
+                                                                    <span class="help-block">(999) 999-9999</span>
+                                                                </div>
+                                                            </div>
+															<button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+														</div>
+													</div>
+												</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="footer-copy-right">
+                            <p>Copyright © 2018. All rights reserved. Template by <a href="https://colorlib.com/wp/templates/">Colorlib</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jquery
+		============================================ -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap JS
+		============================================ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- wow JS
+		============================================ -->
+    <script src="js/wow.min.js"></script>
+    <!-- price-slider JS
+		============================================ -->
+    <script src="js/jquery-price-slider.js"></script>
+    <!-- meanmenu JS
+		============================================ -->
+    <script src="js/jquery.meanmenu.js"></script>
+    <!-- owl.carousel JS
+		============================================ -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- sticky JS
+		============================================ -->
+    <script src="js/jquery.sticky.js"></script>
+    <!-- scrollUp JS
+		============================================ -->
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <!-- mCustomScrollbar JS
+		============================================ -->
+    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/scrollbar/mCustomScrollbar-active.js"></script>
+    <!-- metisMenu JS
+		============================================ -->
+    <script src="js/metisMenu/metisMenu.min.js"></script>
+    <script src="js/metisMenu/metisMenu-active.js"></script>
+    <!-- morrisjs JS
+		============================================ -->
+    <script src="js/sparkline/jquery.sparkline.min.js"></script>
+    <script src="js/sparkline/jquery.charts-sparkline.js"></script>
+    <!-- calendar JS
+		============================================ -->
+    <script src="js/calendar/moment.min.js"></script>
+    <script src="js/calendar/fullcalendar.min.js"></script>
+    <script src="js/calendar/fullcalendar-active.js"></script>
+    <!-- maskedinput JS
+		============================================ -->
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/masking-active.js"></script>
+    <!-- datepicker JS
+		============================================ -->
+    <script src="js/datepicker/jquery-ui.min.js"></script>
+    <script src="js/datepicker/datepicker-active.js"></script>
+    <script src="js/datapicker/bootstrap-datepicker.js"></script>
+    <script src="js/datapicker/datepicker-active.js"></script>
+    <!-- form validate JS
+		============================================ -->
+    <script src="js/input-mask/jasny-bootstrap.min.js"></script>
+    <script src="js/form-validation/jquery.form.min.js"></script>
+    <script src="js/form-validation/jquery.validate.min.js"></script>
+    <script src="js/form-validation/form-active.js"></script>
+    <!-- dropzone JS
+		============================================ -->
+    <!-- <script src="js/dropzone/dropzone.js"></script> -->
+    <!-- tab JS
+		============================================ -->
+    <script src="js/tab.js"></script>
+    <!-- plugins JS
+		============================================ -->
+    <script src="js/plugins.js"></script>
+    <!-- main JS
+		============================================ -->
+    <script src="js/main.js"></script>
+    <!-- tawk chat JS
+		============================================ -->
+    <script src="js/tawk-chat.js"></script>
+    <!-- <script src="front.js"></script> -->
+    <script src="js/frontApp.js"></script>
+</body>
+
+</html>
