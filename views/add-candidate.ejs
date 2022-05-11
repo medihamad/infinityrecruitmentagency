@@ -4,7 +4,10 @@
 <%- include('./partials/header.ejs')  %> 
 
 <body>
-    <div class="hello"></div>
+   
+   
+       
+   
     <!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
@@ -162,13 +165,17 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="logo-pro">
+                    <!-- <div class="logo-pro">
                         <a href="index.html"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
-       <%- include('./partials/profilenav.ejs') %> 
+        <%- include('./partials/topnav')%>
+        
+            <%if(success !=''){%>
+                <%-include('./partials/successmsg')%>
+            <%}%>
         <!-- Single pro tab review Start-->
         <div class="single-pro-review-area mt-t-30 mg-b-15">
             <div class="container-fluid">
@@ -188,7 +195,7 @@
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <div class="review-content-section">
                                                 <div id="dropzone1" class="pro-ad addcoursepro">
-                                                    <!-- <form action="/upload" class="dropzone dropzone-custom needsclick addcourse" id="demo1-upload"> -->
+                                                    <form action="/" autocapitalize="off" class="dropzone dropzone-custom needsclick addcourse" method="POST" id="demo1-upload"> 
                                                         <div class="row">
                                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
@@ -213,7 +220,7 @@
                                                                                 <div class="input prepend-small-btn">
                                                                                     <div class="file-button">
                                                                                         P. photo
-                                                                                        <input id="file_upload1" type="file">
+                                                                                        <input id="file_upload1" name="passportphoto" type="file">
                                                                                     </div>
                                                                                     <input type="text" id="prepend-small-btn1" placeholder="no file selected">
                                                                                 </div>
@@ -225,11 +232,11 @@
                                                                     <div class="form-group data-custon-pick" id="data_2">
                                                                         <div class="input-group date">
                                                                             <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                                                            <input type="text" class="form-control" value="" placeholder="Registration date">
+                                                                            <input type="text" class="form-control" autocomplete="off" name="registrationdate" value="" required placeholder="Registration date">
                                                                         </div>
                                                                     </div>
                                                                 <div class="form-group">
-                                                                    <input name="name" id="name" type="text" class="form-control" placeholder="Name">
+                                                                    <input name="name" id="name" autocomplete="off" autocapitalize="characters" required type="text" class="form-control" placeholder="Name">
                                                                 </div>
                                                                 <!-- <div class="form-group">
                                                                     <input name="telephone" type="number" class="form-control" placeholder="Telephone">
@@ -242,7 +249,7 @@
                                                                     </div> -->
                                                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                         <div class="input-mark-inner mg-b-22">
-                                                                            <input type="text" class="form-control" data-mask="(999) 999-9999" placeholder="Phone number">
+                                                                            <input type="text" name="phonenumber"  required class="form-control" data-mask="(256) 9999-99999" placeholder="Phone number">
                                                                             <span class="help-block">(999) 999-9999</span>
                                                                         </div>
                                                                     </div>
@@ -252,16 +259,14 @@
                                                                 <div class="form-group data-custon-pick" id="data_2">
                                                                     <div class="input-group date">
                                                                         <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                                                        <input type="text" class="form-control" value="" placeholder="Date of birth">
+                                                                        <input name="dateofbirth" required autocomplete="off" type="text" class="form-control" value="" placeholder="Date of birth">
                                                                     </div>
                                                                 </div>
-                                                                <div class="form-group">
-                                                                    <input name="age" id="age" type="number" class="form-control" placeholder="Age">
-                                                                </div>
+                                                                
 
                                                                 <div class="chosen-select-single mg-b-20 form-group">
                                                                    
-                                                                    <select data-placeholder="Choose a Country..." class="chosen-select form-control" tabindex="-1">
+                                                                    <select name="maritalstatus" id="maritalStatus autocapitalize="characters" data-placeholder="Marital Status" required class="chosen-select form-control" tabindex="-1">
                                                                             <option value="">Marital status</option>
                                                                             <option value="Married">Married</option>
                                                                             <option value="Single">Single</option>
@@ -269,18 +274,13 @@
                                                                 </div>
                                                                
                                                                 <div class="form-group">
-                                                                    <input name="children" type="text" class="form-control" placeholder="Number of Children">
+                                                                    <input name="numberofchildren" autocomplete="off" required maxlength="1" minlength="1" type="text" class="form-control" placeholder="Number of Children">
                                                                 </div>
 
                                                                 
 
                                                                 <div class="chosen-select-single mg-b-20">
-                                                                    
-                                                                    <select data-placeholder="Choose a Country..." class="chosen-select form-control" tabindex="-1">
-                                                                            <option value="">Select Job category</option>
-                                                                            <option value="House maid">House maid</option>
-                                                                            <option value="Nurse">Nurse</option>
-                                                                    </select>
+                                                                    <input name="passportnumber" required minlength="9" maxlength="9" autocomplete="off" autocapitalize="characters" type="text" class="form-control" placeholder="Passport Number">
                                                                 </div>
                                                                
                                                             </div>
@@ -307,7 +307,7 @@
                                                                                 <div class="input prepend-small-btn">
                                                                                     <div class="file-button">
                                                                                         F. photo
-                                                                                        <input type="file" id="file_upload" />
+                                                                                        <input name="fullphoto" type="file" id="file_upload" />
                                                                                     </div>
                                                                                     <input type="text" id="prepend-small-btn2" placeholder="no file selected">
                                                                                 </div>
@@ -330,12 +330,12 @@
                                                                     <input name="religion" type="text" class="form-control" placeholder="Religion">
                                                                 </div> -->
 
-                                                                <div class="chosen-select-single mg-b-20">
+                                                                <div class="chosen-select-single form-group mg-b-20">
                                                                     
-                                                                    <select data-placeholder="Choose a Country..." class="chosen-select form-control" tabindex="-1">
+                                                                    <select name="religion" required data-placeholder="Choose a Country..." class="chosen-select form-control" tabindex="-1">
                                                                             <option value="">Religion</option>
-                                                                            <option value="Moslem">Moslem</option>
-                                                                            <option value="Christian">Christian</option>
+                                                                            <option autocapitalize="characters" value="Moslem">Moslem</option>
+                                                                            <option autocapitalize="characters" value="Christian">Christian</option>
                                                                     </select>
                                                                 </div>
 
@@ -345,33 +345,36 @@
 
                                                                 <div class="chosen-select-single mg-b-20">
                                                                     
-                                                                    <select data-placeholder="Choose a Country..." class="chosen-select form-control" tabindex="-1">
+                                                                    <select name="jobtitle" required data-placeholder="Job Title" class="chosen-select form-control" tabindex="-1">
                                                                             <option value="">Job title</option>
-                                                                            <option value="House maid">House maid</option>
-                                                                            <option value="Nurse">Nurse</option>
+                                                                            <option autocapitalize="characters" value="House maid">House maid</option>
+                                                                            <option autocapitalize="characters" value="Nurse">Nurse</option>
                                                                     </select>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <input name="crprofessor" type="text" class="form-control" placeholder="NIN number">
+                                                                    <input name="ninnumber" autocapitalize="characters" autocomplete="off" maxlength="14" minlength="14" required type="text" class="form-control" placeholder="NIN number">
                                                                 </div>
                                                                 <!-- <div class="form-group">
                                                                     <input id="year" name="year" type="text" class="form-control" placeholder="Year">
                                                                 </div> -->
 
                                                                 <div class="form-group">
-                                                                    <input type="text" class="form-control" placeholder="Spouse Surname">
+                                                                    <input type="text" name="spousesurname" id="spouseSurname" autocapitalize="characters" autocomplete="off" disabled class="form-control" placeholder="Spouse Surname">
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <input type="text" class="form-control" placeholder="Spouse Given name">
+                                                                    <input name="spousegivenname" type="text" id="spouseGivenName" autocapitalize="characters" disabled class="form-control" placeholder="Spouse Given name">
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <input type="text" class="form-control" placeholder="Maiden names">
+                                                                    <input name="maidennames" type="text" id="maidenNames" autocapitalize="characters" autocomplete="off" disabled class="form-control" placeholder="Maiden names">
+                                                                </div>
+                                                                <div class="form-group data-custon-pick" id="data_2">
+                                                                    <div class="input-group date">
+                                                                        <span class="input-group-addon hidespecial" id="dateicon"><i class="fa fa-calendar"></i></span>
+                                                                        <input name="dateofmarriage" id="dateOfMarriage" autocapitalize="characters" autocomplete="off" disabled  type="text" class="form-control" value="" placeholder="Date of Marriage">
+                                                                    </div>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <input type="text" class="form-control" placeholder="Date of marriage">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <input type="text" class="form-control" placeholder="Place of marriage">
+                                                                    <input name="placeofmarriage" type="text" id="placeOfMarriage" autocapitalize="characters" autocomplete="off" disabled class="form-control" placeholder="Place of marriage">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -382,7 +385,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    <!-- </form> -->
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -626,8 +629,8 @@
 															</div>
 															<div class="form-group">
                                                                 <div class="input-mark-inner mg-b-22">
-                                                                    <input type="text" class="form-control" data-mask="(999) 999-9999" placeholder="Phone number">
-                                                                    <span class="help-block">(999) 999-9999</span>
+                                                                    <input type="text" class="form-control" data-mask="(999) 9999-99999" placeholder="Phone number">
+                                                                    <span class="help-block">(999) 9999-99999</span>
                                                                 </div>
                                                             </div>
 															<div class="form-group">
@@ -687,93 +690,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer-copyright-area">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="footer-copy-right">
-                            <p>Copyright © 2018. All rights reserved. Template by <a href="https://colorlib.com/wp/templates/">Colorlib</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- jquery
-		============================================ -->
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <!-- bootstrap JS
-		============================================ -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- wow JS
-		============================================ -->
-    <script src="js/wow.min.js"></script>
-    <!-- price-slider JS
-		============================================ -->
-    <script src="js/jquery-price-slider.js"></script>
-    <!-- meanmenu JS
-		============================================ -->
-    <script src="js/jquery.meanmenu.js"></script>
-    <!-- owl.carousel JS
-		============================================ -->
-    <script src="js/owl.carousel.min.js"></script>
-    <!-- sticky JS
-		============================================ -->
-    <script src="js/jquery.sticky.js"></script>
-    <!-- scrollUp JS
-		============================================ -->
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <!-- mCustomScrollbar JS
-		============================================ -->
-    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/scrollbar/mCustomScrollbar-active.js"></script>
-    <!-- metisMenu JS
-		============================================ -->
-    <script src="js/metisMenu/metisMenu.min.js"></script>
-    <script src="js/metisMenu/metisMenu-active.js"></script>
-    <!-- morrisjs JS
-		============================================ -->
-    <script src="js/sparkline/jquery.sparkline.min.js"></script>
-    <script src="js/sparkline/jquery.charts-sparkline.js"></script>
-    <!-- calendar JS
-		============================================ -->
-    <script src="js/calendar/moment.min.js"></script>
-    <script src="js/calendar/fullcalendar.min.js"></script>
-    <script src="js/calendar/fullcalendar-active.js"></script>
-    <!-- maskedinput JS
-		============================================ -->
-    <script src="js/jquery.maskedinput.min.js"></script>
-    <script src="js/masking-active.js"></script>
-    <!-- datepicker JS
-		============================================ -->
-    <script src="js/datepicker/jquery-ui.min.js"></script>
-    <script src="js/datepicker/datepicker-active.js"></script>
-    <script src="js/datapicker/bootstrap-datepicker.js"></script>
-    <script src="js/datapicker/datepicker-active.js"></script>
-    <!-- form validate JS
-		============================================ -->
-    <script src="js/input-mask/jasny-bootstrap.min.js"></script>
-    <script src="js/form-validation/jquery.form.min.js"></script>
-    <script src="js/form-validation/jquery.validate.min.js"></script>
-    <script src="js/form-validation/form-active.js"></script>
-    <!-- dropzone JS
-		============================================ -->
-    <!-- <script src="js/dropzone/dropzone.js"></script> -->
-    <!-- tab JS
-		============================================ -->
-    <script src="js/tab.js"></script>
-    <!-- plugins JS
-		============================================ -->
-    <script src="js/plugins.js"></script>
-    <!-- main JS
-		============================================ -->
-    <script src="js/main.js"></script>
-    <!-- tawk chat JS
-		============================================ -->
-    <script src="js/tawk-chat.js"></script>
-    <!-- <script src="front.js"></script> -->
-    <script src="js/frontApp.js"></script>
+        <%- include('./partials/footer.ejs')%>
 </body>
 
 </html>

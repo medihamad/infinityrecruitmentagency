@@ -48,20 +48,3 @@ file_upload.addEventListener('change', (e)=>{
 
 });
 
-{/* <div class="chosen-select-single mg-b-20 form-group">
-                                                                   
-<select data-placeholder="Choose a Country..." class="chosen-select form-control" tabindex="-1">
-        <option value="">Select Gender</option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-</select>
-</div>
-
-<div class="chosen-select-single mg-b-20">
-
-<select data-placeholder="Choose a Country..." class="chosen-select form-control" tabindex="-1">
-        <option value="">Select Job category</option>
-        <option value="House maid">House maid</option>
-        <option value="Nurse">Nurse</option>
-</select>
-</div> */}

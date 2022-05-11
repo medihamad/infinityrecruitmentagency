@@ -4721,3 +4721,17 @@ div#sparklinehome canvas {
 	color:#fff;
 	text-decoration:none;
 }
+
+
+
+
+
+.form-title{
+    text-decoration: underline;
+    color: blueviolet;
+    margin-bottom: 20px;
+}
+
+.hidealert{
+    opacity: 0;
+}
