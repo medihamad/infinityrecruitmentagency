@@ -32,12 +32,14 @@ function shownew() {
 
 //disabling married fields if candidate is single
 
-let maritalstatus = document.querySelector('body');//selecting the body
-maritalstatus.addEventListener("click", function(e){
-   let ms= document.querySelector('#maritalStatus'); //selecting marital status dropdown
-   let selectedValue= ms.options[ms.selectedIndex].value;//getting the value of the selected option
-   if(selectedValue === "MARRIED"){
-       document.getElementById('spouseSurname').removeAttribute('disabled');
+let body = document.querySelector('body');//selecting the body
+body.addEventListener("click", function(e){
+
+   let ms = document.querySelector('#maritalStatus'); //selecting marital status dropdown
+   let selectedValue = ms.options[ms.selectedIndex].value;//getting the value of the selected option
+   
+   if(selectedValue === "Married"){
+       document.querySelectorAll('married').removeAttribute('disabled');
        document.getElementById('spouseGivenName').removeAttribute('disabled');
        document.getElementById('maidenNames').removeAttribute('disabled');
        document.getElementById('dateOfMarriage').removeAttribute('disabled');
@@ -45,6 +47,7 @@ maritalstatus.addEventListener("click", function(e){
        document.getElementById('dateicon').classList.remove('hidespecial');
    }
    else{
+    console.log(selectedValue);
         document.getElementById('spouseSurname').setAttribute('disabled', "true");
         document.getElementById('spouseGivenName').setAttribute('disabled', "true");
         document.getElementById('maidenNames').setAttribute('disabled', "true");
@@ -56,16 +59,11 @@ maritalstatus.addEventListener("click", function(e){
 
 setTimeout(() => {
       document.querySelector('.hidealert').style.opacity = "1";
-//    //document.querySelector('.hidealert').style.display = "block";
-      document.querySelector('.hidealert').style.transition = "opacity 1s";
-//    document.querySelector('.hidealert').style.opacity = "3";
-//    document.querySelector('.hidealert').style.transition = "opacity 3s";
+      document.querySelector('.hidealert').style.transition = "opacity .1s";
 }, 1000);
 
 setTimeout(() => {
     document.querySelector('.hidealert').style.opacity = "0";
-//    //document.querySelector('.hidealert').style.display = "block";
     document.querySelector('.hidealert').style.transition = "opacity 1s";
-//    document.querySelector('.hidealert').style.opacity = "3";
-//    document.querySelector('.hidealert').style.transition = "opacity 3s";
 }, 3000);
+
